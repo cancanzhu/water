@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- arguments -->
+  <arg name="nodelet_manager" default="velodyne_nodelet_manager" />
+
+  <!-- <include file="$(find hdl_localization)/launch/hdl_localization.launch">
+    <arg name="nodelet_manager" value="$(arg nodelet_manager)"/>
+  </include> -->
+
+  <node pkg="nodelet" type="nodelet" name="hdl_people_detection_nodelet" args="load hdl_people_tracking/HdlPeopleDetectionNodelet $(arg nodelet_manager)" output="screen">
+    <param name="static_sensor" value="false"/>
+    <param name="downsample_resolution" value="0.1"/>
+    <param name="globalmap_frame" value="map"/>
+    <!-- back subtraction params -->
+    <param name="backsub_resolution" value="0.2"/>
+    <param name="backsub_occupancy_thresh" value="2"/>
+    <!-- clustering params -->
+    <param name="cluster_min_pts" value="10"/>
+    <param name="cluster_max_pts" value="2048"/>
+    <param name="cluster_min_size_x" value="0.1"/>
+    <param name="cluster_min_size_y" value="0.1"/>
+    <param name="cluster_min_size_z" value="0.2"/>
+    <param name="cluster_max_size_x" value="1.0"/>
+    <param name="cluster_max_size_y" value="1.0"/>
+    <param name="cluster_max_size_z" value="2.5"/>
+    <!-- classification params -->
+    <param name="enable_classification" value="false"/>
+  </node>
+
+  <node pkg="nodelet" type="nodelet" name="hdl_people_tracking_nodelet" args="load hdl_people_tracking/HdlPeopleTrackingNodelet $(arg nodelet_manager)">
+    <!-- tracks with larger covariance matrix trace than this value will be removed -->
+    <param name="remove_trace_thresh" value="4.0"/>
+    <param name="human_radius" value="0.8"/>
+  </node>
+
+  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find hdl_people_tracking)/rviz/hdl_people_tracking.rviz"/> -->
+
+</launch>
