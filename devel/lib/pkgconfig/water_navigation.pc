@@ -1,0 +1,8 @@
+prefix=/home/zzq/water_ws/devel
+
+Name: water_navigation
+Description: Description of water_navigation
+Version: 1.2.5
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

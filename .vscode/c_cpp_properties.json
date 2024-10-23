@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/zzq/water_ws/devel/include/**",
+        "/home/zzq/GraphicTEB_github_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/zzq/GraphicTEB_github_ws/src/costmap_2d/include/**",
+        "/home/zzq/water_ws/src/hdl_people_tracking/include/**",
+        "/home/zzq/GraphicTEB_github_ws/src/move_base/include/**",
+        "/home/zzq/GraphicTEB_github_ws/src/pedsim_ros_imp/3rdparty/libpedsim/include/**",
+        "/home/zzq/GraphicTEB_github_ws/src/pedsim_map/include/**",
+        "/home/zzq/GraphicTEB_github_ws/src/pedsim_ros_imp/pedsim_simulator/include/**",
+        "/home/zzq/GraphicTEB_github_ws/src/pedsim_ros_imp/pedsim_utils/include/**",
+        "/home/zzq/GraphicTEB_github_ws/src/pedsim_ros_imp/pedsim_visualizer/include/**",
+        "/home/zzq/GraphicTEB_github_ws/src/publish_goal/include/**",
+        "/home/zzq/GraphicTEB_github_ws/src/teb_local_planner/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

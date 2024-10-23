@@ -1,0 +1,2 @@
+fast_gicp:hdl_global_localization:hdl_graph_slam:hdl_localization:hdl_people_tracking:ndt_omp:water_navigation/fake_localization:water_navigation/water_navigation:water_navigation/water_slam:water_navigation/water_teleop
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/zzq/water_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zzq/water_ws/install -G Unix Makefiles

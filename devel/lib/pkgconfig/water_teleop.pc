@@ -1,0 +1,8 @@
+prefix=/home/zzq/water_ws/devel
+
+Name: water_teleop
+Description: Description of water_teleop
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
